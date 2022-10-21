@@ -64,10 +64,14 @@ with open('member.dat', encoding='UTF-8') as f:
         item = line.split('/') # 각 행의 자료를 구분자로 분리해서 리스트에 저장
         out = f'{item[0]}{item[1]}{item[2]}{item[3]}'
         print(out, end='')
-print(doc7) # 한 건만 출력됨
+print(out) # 한 건만 출력됨
 
-# 학생으로부터 이름,국어,영어,수학 점수를 입력받아
+# 학생으로부터 이름,국어,영어,수학 점수
 # 파일에 저장하세요 (파일명 : sungjuk.dat)
-# 단, 점수는 임의로, 파일에 저장하는 형식은
-# "이름,국어,영어,수학" 순으로 작성함
-# => 혜교,99,98,99 ( csv 형식 )
+# 이름 : abc, 국어,영어,수학
+
+
+with open('sungjuk.dat', encoding='UTF-8') as f:
+    doc8 = f.readlines() # 행단위로 모두 읽어 리스트로 반환
+for doc in doc8:
+    print(doc, end='')
