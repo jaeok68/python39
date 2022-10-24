@@ -45,7 +45,7 @@ class SungJukVO:
     def avg(self):
         return self.__avg
 
-    @tot.setter
+    @avg.setter
     def avg(self, avg):
         self.__avg = avg
 
@@ -53,6 +53,6 @@ class SungJukVO:
     def grd(self):
         return self.__grd
 
-    @tot.setter
+    @grd.setter
     def grd(self, grd):
         self.__grd = grd

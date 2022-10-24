@@ -85,9 +85,9 @@ class SungJukv8Lib:
 
 
         # 새로운 값을 입력받음
-        kor = int(input(f'새로운 국어 :  ({sj[1]})'))
-        eng = int(input(f'새로운 영어 :  ({sj[2]})'))
-        mat = int(input(f'새로운 수학 :  ({sj[3]})'))
+        kor = int(input(f'새로운 국어 :  ({sj[2]})'))
+        eng = int(input(f'새로운 영어 :  ({sj[3]})'))
+        mat = int(input(f'새로운 수학 :  ({sj[4]})'))
 
         # 다시 성적 처리
         sj = SungJukVO(name, kor, eng, mat)
@@ -115,3 +115,4 @@ class SungJukv8Lib:
         elif sj.avg >= 70: sj.grd = '미'
         elif sj.avg >= 60: sj.grd = '양'
 
+        return sj.tot, sj.avg, sj.grd
