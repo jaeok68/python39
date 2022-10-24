@@ -2,6 +2,7 @@
 # pymysql 모듈을 먼저 설치 (terminal) : pip install pymysql
 import pymysql
 
+
 url = 'bigdata.cfmejgv8lqnx.ap-northeast-2.rds.amazonaws.com'
 userid = 'admin'
 passwd = 'Bigdata_2022'
@@ -19,9 +20,9 @@ rows = cur.fetchall()
 for row in rows:
     result += f'{row[0]} {row[1]} {row[2]} {row[3]}\n'
 
-print(result)
 cur.close()
 conn.close()
+print(result)
 
 
 # 마리아DB로 데이터 다루기 2 - insert
